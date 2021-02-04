@@ -1,0 +1,45 @@
+blowfish
+	https://github.com/shaneGirish/bcrypt-nodejs
+	usage:
+		var hash = bcrypt.hashSync("bacon");
+		bcrypt.compareSync("bacon", hash); // true
+		bcrypt.compareSync("veggies", hash); // false
+
+
+https://github.com/motdotla/dotenv
+create ".env" file in repo root with this content:
+DATABASE_USER=<value>
+DATABASE_PASSWORD=<value>
+DATABASE_HOST=<value>
+DATABASE_PORT=<value>
+DATABASE_SERVER=<value>
+
+
+Enable automatic uuid by postgresql (http://www.starkandwayne.com/blog/uuid-primary-keys-in-postgresql/):
+	install heroku CLI
+	install postgres
+	add psql (postgres) to PATH
+	cmd:
+		heroku pg:psql --app cmov-nodejs-server
+		CREATE EXTENSION pgcrypto;
+
+
+HTTP REQUESTS
+http://loopj.com/android-async-http/
+
+Action bar
+https://guides.codepath.com/android/Extended-ActionBar-Guide
+
+QR Codes
+http://stackoverflow.com/questions/28232116/android-using-zxing-generate-qr-code
+
+Vibration/Haptic Feedback
+http://androidcookbook.com/Recipe.seam?recipeId=1242
+
+Shake on error
+http://droid-blog.net/2012/05/15/two-simple-ways-to-make-your-users-aware-of-incorrect-input/
+
+------------------------------------------------------------
+http://localhost:5000/register
+http://cmov-nodejs-server.herokuapp.com/register
+POST {"user": {"name":"João Norim Bandeira", "email": "norim_13@hotmail.com", "nif" : "999999999"}}

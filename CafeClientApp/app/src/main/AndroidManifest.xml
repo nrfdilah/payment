@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.joao.cafeclientapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".authentication.RegisterActivity"
+            android:label="@string/title_activity_register" />
+        <activity android:name=".authentication.PinDisplayActivity" />
+        <activity
+            android:name=".menu.ShowMenuActivity"
+            android:label="@string/title_activity_show_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".cart.CartActivity"
+            android:label="@string/title_activity_cart"
+            android:parentActivityName=".menu.ShowMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.joao.cafeclientapp.menu.ShowMenuActivity" />
+        </activity>
+        <activity
+            android:name=".authentication.LoginActivity"
+            android:label="@string/title_activity_login">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".cart.QrCodeCheckoutActivity" />
+        <activity android:name=".PinAskActivity" />
+        <activity
+            android:name=".user.orders.PreviousOrdersActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".user.profile.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".user.orders.ShowOrderActivity"
+            android:label="@string/title_activity_show_order"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".user.profile.ChangePrimaryCreditCardActivity"
+            android:label="@string/title_activity_change_primary_credit_card"
+            android:parentActivityName=".user.profile.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.joao.cafeclientapp.user.profile.ProfileActivity" />
+        </activity>
+        <activity
+            android:name=".user.vouchers.VouchersActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".cart.CartPinAskActivity"></activity>
+    </application>
+
+</manifest>
